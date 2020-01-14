@@ -2,18 +2,27 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "url": "https://i.imgur.com/lMHO0w1.jpeg"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "url": "https://i.imgur.com/lMHO0w1.jpeg"
+    },
+    {
+      "id": 3,
+      "url": "https://i.imgur.com/lMHO0w1.jpeg"
+    },
+    {
+      "id": 4,
+      "url": "https://i.imgur.com/lMHO0w1.jpeg"
+    },
+    {
+      "id": 5,
+      "url": "https://i.imgur.com/lMHO0w1.jpeg"
+    },
+    {
+      "id": 6,
+      "url": "https://i.imgur.com/lMHO0w1.jpeg"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

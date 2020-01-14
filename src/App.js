@@ -6,18 +6,23 @@ import Image from "./components/Image"
 import postService from "./postService"
 
 const App = (props) => {
-  const [asd, setAsd] = useState([]);
+  const [posts, setPosts] = useState([]);
   useEffect(() => {
     try {
-      setAsd(postService.getAllPics())
+      setPosts(postService.getAllPics())
     } catch {
-      console.log("asd");
+      console.log("errno")
     }
   }, [])
   return (
     <div>
-      {/* <p>{asd[0].id}</p> */}
-      <Image url="https://i.imgur.com/lMHO0w1.jpeg" />
+      <p>asd</p>
+      <div>
+        {" "}
+        {posts.map(p => (
+          <Image url={p.url} key={p.id} />
+        ))}{" "}
+      </div>
     </div>
   )
 }

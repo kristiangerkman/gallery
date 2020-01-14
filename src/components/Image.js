@@ -1,16 +1,26 @@
-import React from "react"
-import { imageChecker } from "../imageChecker"
+import React, { useState } from "react"
 import imagePlaceholder from "../404.png"
 
+/* function imageExists(url, callback) {
+    var img = new Image();
+    img.onload = function () { callback(true); };
+    img.onerror = function () { callback(false); };
+    img.src = url;
+} */
+
 const Image = (props) => {
-    console.log(imageChecker(props.url))
-    if (imageChecker(props.url)) {
+    /*     const [bool, setBool] = useState(false);
+    
+        () => imageExists(props.url, function (bool) { setBool(bool) });
+    
+     */
+    if (1) {
         return (
-            <img src={props.url} />
+            <img class="image" src={props.url} alt="asd" />
         )
     } else {
         return (
-            <img src={imagePlaceholder} alt="asdasda" />
+            <img class="image" src={imagePlaceholder} alt="asdasda" />
         )
     }
 }
