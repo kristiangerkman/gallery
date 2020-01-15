@@ -2,7 +2,7 @@ import React from "react"
 
 const Login = (props) => {
     return (
-        <div>
+        <div className="contentContainer">
             <form>
                 Username:
                 <input type="text" name="username" value=""></input> <br /><br />

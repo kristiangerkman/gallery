@@ -21,12 +21,12 @@ const App = (props) => {
 
   return (
 
-    <div>
+    <div className="main">
       <Router>
         <MenuBar />
         <Route path="/posts" render={() => <Posts posts={posts} />} />
         <Route path="/login" render={() => <Login />} />
-        <Route path="/create" render={() => <PostForm />} />
+        <Route path="/create" render={() => <PostForm setPosts={setPosts} posts={posts} />} />
       </Router>
     </div>
   )

@@ -15,19 +15,19 @@ const PostForm = (props) => {
             id: createID()
         }
 
-        postService.uploadPost(req)
-
+        postService.uploadPost(req).then(r => props.setPosts(props.posts.concat(r.data)))
 
     }
     return (
-
-        <form onSubmit={handleSubmit}>
-            Title:<br />
-            <input type="text" name="title"></input> <br /> <br />
-            URL:<br />
-            <input type="text" name="url"></input> <br /> <br />
-            <button type="submit">Submit</button>
-        </form>
+        <div className="contentContainer">
+            <form onSubmit={handleSubmit}>
+                Title:<br />
+                <input type="text" name="title"></input> <br /> <br />
+                URL:<br />
+                <input type="text" name="url"></input> <br /> <br />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     )
 }
 

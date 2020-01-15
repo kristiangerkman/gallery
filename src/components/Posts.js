@@ -4,7 +4,7 @@ import PostContainer from "./PostContainer"
 
 const Posts = (props) => {
     return (
-        <div>
+        <div className="contentContainer">
             {" "}
             {props.posts.map(p => (
                 <PostContainer key={p.id} url={p.url} />
