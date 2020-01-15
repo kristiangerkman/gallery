@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Login from "./components/Login"
-import Image from "./components/Image"
 import postService from "./postService"
 import PostForm from './components/PostForm';
+import PostContainer from "./components/PostContainer"
 
 const App = (props) => {
   const [posts, setPosts] = useState([]);
@@ -20,7 +20,7 @@ const App = (props) => {
     <div>
       {" "}
       {posts.map(p => (
-        <Image key={p.id} url={p.url} />
+        <PostContainer key={p.id} url={p.url} />
       ))}{" "}
 
       <PostForm />
