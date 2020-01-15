@@ -9,17 +9,18 @@ const App = (props) => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     try {
-      console.log(postService.getAllPics());
+      postService.getAllPics().then(s => setPosts(s.data))
     } catch {
       console.log("errno")
     }
-  }, [])
+  }, [setPosts])
 
-  posts.map(p => console.log(p))
   return (
     <div>
-      <p>asd</p>
-
+      {" "}
+      {posts.map(p => (
+        <Image key={p.id} url={p.url} />
+      ))}{" "}
     </div>
   )
 }

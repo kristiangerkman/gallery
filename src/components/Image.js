@@ -16,11 +16,11 @@ const Image = (props) => {
      */
     if (1) {
         return (
-            <img class="image" src={props.url} alt="asd" />
+            <img className="image" src={props.url} alt="asd" />
         )
     } else {
         return (
-            <img class="image" src={imagePlaceholder} alt="asdasda" />
+            <img className="image" src={imagePlaceholder} alt="asdasda" />
         )
     }
 }
