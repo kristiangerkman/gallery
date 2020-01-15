@@ -2,25 +2,6 @@
   text-align: center;
 }
 
-/* .image {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  position: relative
-} */
-
-/* .postContainer {
-  display: inline-block;
-  width: 230px;
-  height: 270px;
-  background-color: red;
-  margin: 10px;
-} 
-.postContainer img {
-  width: 100%;
-  height: auto;
-} */
-
 .postContainer {
   width: 230px;
   height: 270px;

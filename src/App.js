@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import Login from "./components/Login"
 import postService from "./postService"
 import PostForm from './components/PostForm';
 import PostContainer from "./components/PostContainer"
+import Posts from "./components/Posts"
+import MenuBar from "./components/MenuBar"
 
 const App = (props) => {
   const [posts, setPosts] = useState([]);
@@ -17,13 +20,14 @@ const App = (props) => {
   }, [setPosts])
 
   return (
-    <div>
-      {" "}
-      {posts.map(p => (
-        <PostContainer key={p.id} url={p.url} />
-      ))}{" "}
 
-      <PostForm />
+    <div>
+      <Router>
+        <MenuBar />
+        <Route path="/posts" render={() => <Posts posts={posts} />} />
+        <Route path="/login" render={() => <Login />} />
+        <Route path="/create" render={() => <PostForm />} />
+      </Router>
     </div>
   )
 }
