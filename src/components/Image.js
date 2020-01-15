@@ -9,20 +9,16 @@ import imagePlaceholder from "../404.png"
 } */
 
 const Image = (props) => {
-    /*     const [bool, setBool] = useState(false);
-    
-        () => imageExists(props.url, function (bool) { setBool(bool) });
-    
-     */
-    if (1) {
-        return (
-            <img className="image" src={props.url} alt="asd" />
-        )
-    } else {
-        return (
-            <img className="image" src={imagePlaceholder} alt="asdasda" />
-        )
+    var src = props.url
+
+    const imgError = (image) => {
+        image.target.src = imagePlaceholder
+        return true
     }
+
+    return (
+        <img className="image" src={src} onError={imgError} alt="a" />
+    )
 }
 
 export default Image

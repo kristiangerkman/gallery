@@ -4,6 +4,7 @@ import './App.css';
 import Login from "./components/Login"
 import Image from "./components/Image"
 import postService from "./postService"
+import PostForm from './components/PostForm';
 
 const App = (props) => {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,8 @@ const App = (props) => {
       {posts.map(p => (
         <Image key={p.id} url={p.url} />
       ))}{" "}
+
+      <PostForm />
     </div>
   )
 }
