@@ -8,6 +8,7 @@ import PostForm from './components/PostForm';
 import PostContainer from "./components/PostContainer"
 import Posts from "./components/Posts"
 import MenuBar from "./components/MenuBar"
+import FrontPage from "./components/FrontPage"
 
 const App = (props) => {
   const [posts, setPosts] = useState([]);
@@ -24,6 +25,7 @@ const App = (props) => {
     <div className="main">
       <Router>
         <MenuBar />
+        <Route path="/" render={() => <FrontPage />} />
         <Route path="/posts" render={() => <Posts posts={posts} />} />
         <Route path="/login" render={() => <Login />} />
         <Route path="/create" render={() => <PostForm setPosts={setPosts} posts={posts} />} />

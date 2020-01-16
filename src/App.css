@@ -9,7 +9,9 @@
 #CA6B68
 #EEEEF1
 */
-
+.logo{
+  margin: auto;
+}
 .postContainer {
   width: 230px;
   height: 270px;
